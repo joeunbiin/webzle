@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+
+img {vertical-align: middle;}
+.row {max-width: 1200px; margin: 0 auto;}
+
+.gallery  {overflow: hidden; }
+.gallery li {float: left; width: 25%;}
+.gallery li p {padding: 10px 0; font-size: 16px; padding-left: 20px;
+                font-weight: bold; float: left; font-weight: bold;}
+.article9 .gallery button {width: 25px; height: 25px; color: #666; padding-right: 20px;
+                           font-size: 14px; float: right; transform: translateY(20%);}
+                           /* border-radius: 5px; border: 1px solid #333; background: #ccc;  */
+.article9 .pushBtn {text-align: center; margin-top: 50px; margin-bottom: 30px;
+                    text-align: right;}
+.article9 .pushBtn button {width: 100px; height: 30px; color: #aaa081;
+                           font-weight: bold; font-size: 25px; margin-right: 30px;
+                           font-style: italic;}     
+.article9 .pushBtn button i {font-style: italic; font-size: 20px;}   
+.article9 .formBox {position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99999;
+                    background: rgba(0,0,0,0.5); display: none;}
+.article9 form {width: 500px; margin: 0 auto; background: #eee; 
+                position: relative; transform: translateY(-50%); top: 50%;
+                padding: 30px 30px 25px; text-align: center;}
+.article9 form .allbox {border: 2px solid #888; text-align: center;}
+.article9 form p {padding: 10px; font-weight: 600;}      
+.article9 form input {padding: 5px 0 5px 7px}     
+.article9 form button {background: #aaa081; padding: 5px 12px; margin-top: 28px; margin-right: 5px;
+                       border-radius: 5px; font-size: 15px; }
+.article9 .closeform {position: absolute; top: -17px; right: -10px;
+                     font-size: 38px; color: #494433;}

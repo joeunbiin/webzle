@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box ;}
+        .popup {width: 500px;}
+        .popup img {width: 100%;}
+        .btn {text-align: center; margin-top: 5px;}
+        .btn button {background: #ddd; border: 1px solid #999; padding: 2px 5px;}
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <img src="img/popup.png" alt="">
+        <div class="btn">
+            <input type="checkbox" id="chk"> 하루 동안 열지 않기
+            <button type="button" onclick="wclose()">닫기</button>
+        </div>
+    </div>
+    <script>
+        function wclose(){
+            if (document.getElementById('chk').checked) {
+                var date = new Date()
+                date.setDate(date.getDate()+ 1)  // 만료시간
+                document.cookie = escape('popupYN') +'='+escape('N')+"; expires="+date.toUTCString();
+            }
+            self.close()
+        }
+    </script>
+</body>
+</html>

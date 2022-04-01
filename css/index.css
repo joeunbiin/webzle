@@ -1,0 +1,219 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {font-family: "Noto Sans", "Noto Sans KR", sans-serif; color: #333; background: #eee;}
+.row {max-width: 1200px; margin: 0 auto; padding: 0 10px;}
+button {outline: none; background: none;}
+
+
+
+/* 공통 */
+.title p {color: #aaa081; font-size: 20px; font-weight: bold; font-style: italic;}
+.title p::before {content: ''; width: 70px; height: 3px; background: #aaa081;
+                  transform: translateX(-50%); display: block; margin-bottom: 10px;}
+.title h3 {font-size: 36px; font-weight: bold; margin: 30px 0 50px 10px}
+
+
+/* article1 구역 */
+.article1 {height: 675px; position: relative;}
+.slide_group1 {position: relative;}
+.slide_group1 .slide {position: relative;}
+.slide_group1 .slide1 .img{background: url(../img/main_slider_01.jpg) no-repeat center;
+                           height: 675px; background-size: cover;}
+.slide_group1 .slide2 .img{background: url(../img/main_slider_02.jpg) no-repeat center;
+                           height: 675px; background-size: cover;}
+.slide_group1 .slide3 .img{background: url(../img/main_slider_03.jpg) no-repeat center;
+                           height: 675px; background-size: cover;}
+.slide_group1 .slide.slick-active .img {animation: slideImg 5s both;}                           
+@keyframes slideImg {from {transform: scale3d(1,1,1)} to {transform: scale3d(1.3,1.3,1.3)}}                          
+.slide_group1 .slidetext {position: absolute; top: 38%; left: 0; right: 0; line-height: 1.5;
+                         text-align: center; color: #fff; transform: translateY(-50%); 
+                         word-break: keep-all; overflow: hidden; text-overflow: ellipsis;}
+.slide_group1 .slidetext p {font-size: 25px; font-weight: 700; padding-bottom: 20px;}
+.slide_group1 .slidetext h2 {font-size: 50px; font-weight: 500; padding-bottom: 50px;}
+.slide_group1 .slidetext a {display: inline-block; font-size: 17px; padding: 15px 45px;
+                           background: rgba(255,255,255,0.8); color: #333;
+                           font-weight: 600; transition: all 0.5s;}
+.slide_group1 .slidetext a:hover {background: rgb(48, 164, 136, 0.8); color:#fff}
+.slide_group1 .slide.slick-active .slidetext h2 {animation: fadeInDown 0.5s both 0.3s;} 
+.slide_group1 .slide.slick-active .slidetext p {animation: fadeInDown 0.5s both 0.8s;} 
+.slide_group1 .slide.slick-active .slidetext a {animation: fadeInUp 0.5s both 1.3s;} 
+.slide_group1 .slick-arrow {position: absolute; top: 50%; transform: translateY(-50%);
+                            border: none; background: none; z-index: 9999; font-size: 30px; 
+                            color:#fff;}
+.slide_group1 .prev {left: 70px; width: 53px; height: 53px; border-radius: 50%; cursor: pointer;
+                    line-height: 53px; background:rgba(255,255,255,0.2); transition: all 0.5s;}
+.slide_group1 .next {right: 70px; width: 53px; height: 53px; border-radius: 50%; cursor: pointer;
+                    line-height: 53px; background:rgba(255,255,255,0.2); transition: all 0.5s;}
+.slide_group1 .prev:hover, .slide_group1 .next:hover {background:rgba(255,255,255,0.7); color:#333}                    
+.slide_group1 .slick-dots {position: absolute; bottom: 120px; left: 0; right: 0; text-align: center;}
+.slide_group1 .slick-dots li {display: inline-block; margin: 0 5px; width: 100px; height: 3px; 
+                              background:rgba(255,255,255,0.2); position: relative;}
+.slide_group1 .slick-dots li button {width: 0px; height: 3px; background: #30a488; text-indent: -9999px; 
+                                     border: none; overflow: hidden; position: absolute; top: 0; left: 0;}
+.slide_group1 .slick-dots li.slick-active button {animation: barani 3s both;}
+@keyframes barani {from {width: 0;} to {width: 100px;}}
+.article1 .playstop {position: absolute; bottom: 115px; left: 50%; margin-left: 170px; color:rgba(255,255,255,0.2); 
+                     border: none; background: none; font-size: 14px;}
+
+
+/* article2 구역 */
+.article2 ul {text-align: center; margin-top: -90px; z-index: 99999; position: relative;}
+.article2 ul li {height: 380px; float: left; width: 33.3333%;
+                  opacity: 0; -webkit-transform: translate3d(0, 100%, 0); 
+                  transform: translate3d(0, 100%, 0); transition: all 0.3s}
+.article2.on ul li:nth-child(1) {animation: fadeInUp 0.3s both 0.6s}
+.article2.on ul li:nth-child(2) {animation: fadeInUp 0.3s both 0.8s}
+.article2.on ul li:nth-child(3) {animation: fadeInUp 0.3s both 1s}
+.article2 li i {font-size: 40px; background: rgba(0,0,0,0.05); border-radius: 50%; 
+                width: 90px; height: 90px; line-height: 90px; margin: 50px 0 20px;}
+.article2 li h3 {font-size: 23px; margin-bottom: 20px;} 
+.article2 li p {color:#777; line-height: 1.5; padding: 5px 0 ;}
+.article2 li:nth-child(1) {background: #fff;}
+.article2 li:nth-child(2) {background: #252930;}
+.article2 li:nth-child(3) {background: #fff;}
+.article2 li > a:last-of-type {display: inline-block; padding: 13px 30px; margin-top: 30px; 
+                             background: #ddd; transition: all 0.5s;}
+.article2 li > a:last-of-type:hover {background: #222; color: #fff;}
+.article2 li:nth-child(1) p {float: left; width: 20%; margin-right: 10%; margin-left: 10%; 
+                             border: 2px solid #888;; padding: 5px 8px; font-size: 14px;
+                             margin-top: 22px; border-radius: 20px; transition: all 0.5s;}
+.article2 li:nth-child(1) p:hover {background: #888; color: #fff;}
+.article2 li:nth-child(1) p:nth-of-type(2) {margin-left: 0; margin-right: 0;}     
+.article2 li:nth-child(2) i {background: rgba(255,255,255,0.05); color: #aaa081;}
+.article2 li:nth-child(2) h3 {color: #fff}
+.article2 li:nth-child(2) a:nth-of-type(2) {background: #aaa081; transition: all 0.5s;}
+.article2 li:nth-child(2) a:nth-of-type(2):hover {background: #fff; color: #222;}
+
+
+/* article3 구역 */
+.article3 {margin-top: 100px;}
+.article3 img {float: left; animation: ani 5s ease-in-out 0s infinite alternate;
+               padding-left: 30px;}
+.article3 .onview {float: right; width: 60%; padding-top: 110px; padding-right: 80px;
+                   padding-left: 10px;}
+.article3 .onview span {line-height: 1.5; overflow: hidden; text-overflow: ellipsis; word-break: keep-all;
+                        color: #555;}   
+.article3 .onview ul {line-height: 2; margin: 50px 0 0 40px;}  
+.article3 .onview ul li {float: left; width: 33.3333%; list-style-type: disc; counter-reset: #222;}         
+@keyframes ani {0% { transform:translateY(0px) } 100% { transform:translateY(50px) }}
+ 
+
+/* article4 구역 */
+.article4 {margin-top: 100px; }
+.article4 .going {float: left; width: 32%; text-align: center; margin-right: 2%;
+                  margin-top: 10px; }
+.article4 .gh > .last {margin-right: 0;} 
+.article4 .going .imgef {position: relative; overflow: hidden}
+.article4 .going .imgef img {width: 100%}
+.article4 .going .imgef::after {content: ""; width: 150%; height: 200%; z-index: 11;
+                                position: absolute; top: -100%; left: -180%; transition: 1s;
+                                transform: rotate(30deg) scale(1.2); 
+                                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.7) 100%);}
+.article4 .going:hover .imgef::after {top: 100%; left: 100%; -webkit-transform: rotate(0); transform: rotate(0);}
+.article4 .going div:last-child p:nth-of-type(1) {font-size: 20px; padding: 20px 0; line-height: 1.5; 
+                                                  font-weight: bold;}
+.article4 .going div:last-child p:nth-of-type(2) {font-size: 14px; color: #aaa081;}
+
+
+/* article5 구역 */
+.article5 {margin-top: 100px; height: 650px; background: url(../img/cont.jpg) no-repeat;
+            background-attachment: fixed; background-size: cover;}
+.article5 .title p {padding-top: 80px;}
+.article5 .title h3 {color: #fff;}
+.article5 .slide {padding-left: 190px; position: relative;}
+.article5 .slide img {display: block; width: 100%; transition: all 0.3s;
+                      -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+                      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%); }
+.article5 .slide img:hover {-webkit-clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0 100%);
+                             clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0 100%);}        
+.article5 .slide .sdtext {position: absolute; bottom: 80px; left: 0; width: 100%; padding-left: 100px;}
+.article5 .slide .sdtext > p {margin: 0; font-size: 26px; line-height: 36px;
+                              font-weight: bold; color: #fff; 
+                              text-shadow: 2px 3px #aaa081; }
+
+
+ /* article6 구역 */
+.article6 {margin-top: 100px;}
+.article6 .column .imgef {position: relative; overflow: hidden;}
+.article6 .column .imgef::after {content: ""; width: 150%; height: 200%; z-index: 11;
+                                position: absolute; top: -100%; left: -180%; transition: 1s;
+                                transform: rotate(30deg) scale(1.2); 
+                                background: linear-gradient( 90deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.7) 100%);}
+.article6 .column:hover .imgef::after {top: 100%; left: 100%; -webkit-transform: rotate(0);
+                                      transform: rotate(0);}
+.article6 .column {float: left; width: 50%; padding: 20px 40px 0 ; height: 760px;}
+.article6 .column p {padding: 40px 10px;  margin-right: 20px;}
+.article6 .column a {padding: 13px 35px; background: #aaa081; display: inline-block;
+                     color: #fff; transition: all 0.5s;}
+.article6 .column1 p {font-size: 15px; color: #999; line-height: 1.5; }  
+.article6 .column2 p {color: #555; font-size: 18px; line-height: 2;}       
+.article6 .column a:hover {background: #222; color: #fff;}
+
+
+/* article7 구역 */
+.article7 {margin-top: 100px;}
+.article7 .programm {padding: 40px 0px 40px 80px; background: #fff; margin-bottom: 25px; 
+                     overflow: hidden; text-overflow: ellipsis; word-break: keep-all;}
+.article7 .programm .first {float: left; width: 32%; }
+.article7 .programm .first p {display: inline-block; font-size: 50px; font-weight: bold ; padding-right: 70px;}
+.article7 .programm .first img {border-radius: 50%; box-shadow: 0px 10px 20px 0px rgb(33 37 43 / 20%);    
+                                cursor: pointer; position: relative; transition: all 1s;}
+.article7 .programm .second {float: left; width: 46%; line-height: 1.5; margin-top: 35px;}
+.article7 .programm .second span {font-size: 25px; font-weight: bold; }
+.article7 .programm .second p {font-size: 17px; margin-top: 20px; color: #999}
+.article7 .programm .third {float: right; width: 22%; margin-top: 68px;}
+.article7 .programm .third a {padding: 12px 30px; border:2px solid #aaa; transition: all 0.5s;}
+.article7 .programm .third a:hover {background: #aaa081; color:#fff}
+.article7 .programm .first img:hover {transform: rotate(360deg) ;}
+
+
+/* article8 구역 */
+.article8 {height: 480px; background: url(../img/cont.jpg) no-repeat; 
+           background-attachment: fixed; background-size: cover; margin-top: 100px;
+           text-align: center; position: relative;}
+.article8 .conttext {position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%);}
+.article8 h4 {font-size: 50px; color: #fff; padding-bottom: 30px;}
+.article8 p {font-size: 18px; color: #fff; line-height: 1.5;}
+.article8 a {display: inline-block; padding: 15px 30px; margin: 40px 15px 20px; border: 1px solid #aaa081;
+             color: #fff; transition: all 0.5s;}
+.article8 a:nth-of-type(2) {background: #aaa081;}
+.article8 a:hover {background: #fff; color: #000;}
+
+
+/* article9 구역 */
+.article9 {margin-top: 100px; } 
+.article9 ul li {float: left; width: 32%; margin-right: 2%; margin-bottom: 20px;
+                  text-align: center; cursor: pointer; box-shadow: 0px 10px 20px 0px rgb(33 37 43 / 5%)}
+.article9 ul li:nth-child(3n) {margin-right: 0;}
+/* .article9 ul li img {box-shadow: 0px 10px 20px 0px rgb(33 37 43 / 5%)} */
+.article9 ul li img:hover {opacity: 0.5}
+
+
+
+/* article10 구역 */
+.article10 {margin-top: 100px; background: #aaa081; padding: 66px 0;}
+.article10 img {margin: 0 auto;}
+
+
+/* article11 구역 */
+.article11 {padding-top: 100px;}
+.article11 div {float: left; width: 31.66%; margin-right: 2.5%;}
+.article11 div:nth-child(3) {margin-right: 0;}
+.article11 div > h3 {font-size: 25px; font-weight: 800; border-bottom: 2px solid #333;
+                     padding-bottom: 5px; margin: 5px 0 10px; }
+.notice table {font-size: 15px;}
+.notice col:nth-child(1) {width: auto;}
+.notice col:nth-child(2) {width: 100px;}
+.notice td {border-bottom: 1px solid #ddd; padding: 9px 5px; }
+.notice td:hover {color: #30a488; cursor: pointer;}
+.notice td:nth-child(1) {white-space: nowrap; overflow: hidden;; text-overflow: ellipsis}
+.notice td:nth-child(2) {text-align: right;}
+.contact ul {font-size: 18px; line-height: 1.8;}
+.contact ul li:hover {color: #30a488;}
+.question p {font-size: 15px; line-height: 1.5; padding-bottom: 30px; cursor: default;}
+.question a {background:rgba(0, 0, 0, 0.5); color: #fff; padding: 10px 20px;
+             border-radius: 5px; transition: all 0.5s; font-size: 15px;}
+.question a:hover {background: #30a488;}
+

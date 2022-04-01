@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body {font-family: "Noto Sans", "Noto Sans KR", sans-serif; color: #333; background: #fff !important}
+
+caption {display: none;}
+.noticebox {padding-top: 80px; padding-bottom: 80px }
+.noticebox h2 {font-size: 30px; padding: 40px 0; font-weight: bold;}
+.noticebox .search {text-align: right}
+.noticebox .search select, .noticebox .search button 
+{height: 35px; vertical-align: middle; vertical-align: middle;} 
+.noticebox .search button {padding: 0 10px; background: #30a488; color: #fff; border-radius: 5px;}
+.noticebox input[type='text'] {border: 1px solid #aaa; text-indent: 1em; vertical-align: middle;
+                               height: 35px; border-radius: 5px;} 
+
+.noticebox table {margin: 20px 0 30px;}
+.noticebox table {border: none;}
+.noticebox table col:nth-child(1) {width: 8%;}
+.noticebox table col:nth-child(2) {width: auto;}
+.noticebox table col:nth-child(3) {width: 13%;}
+.noticebox table col:nth-child(4) {width: 13%;}
+.noticebox table col:nth-child(5) {width: 8%;}
+.noticebox table th, .noticebox table td {border-top: 1px solid #ddd;
+                                          border-bottom: 1px solid #ddd;
+                                          padding: 12px 5px;}
+.noticebox table th {background: #f2f2f2; border-top: 3px solid #ccc;}
+.noticebox table td {white-space: nowrap; overflow: hidden; 
+                     text-overflow: ellipsis;}
+.noticebox table tbody td {text-align: center;}
+.noticebox table tbody td:nth-child(2) {text-align: left;}
+.noticebox .num-list {text-align: center; margin-bottom: 50px;}
+.noticebox .num-list span, .noticebox .num-list a 
+{display: inline-block; padding: 3px 5px; margin: 0 3px;}
+.noticebox .num-list span {background: #333; color: #fff;}
+.noticebox .num-list a.act, .noticebox .num-list a:hover 
+{color: #8D84E4; border-bottom: 1px solid #8D84E4;}
+
+
+@media screen and (max-width: 1024px){
+    .noticebox table col:nth-child(1) {width: 8%;}
+    .noticebox table col:nth-child(2) {width: auto;}
+    .noticebox table col:nth-child(3) {width: 13%;}
+    .noticebox table col:nth-child(4) {width: 13%; display: none;}
+    .noticebox table col:nth-child(5) {width: 8%; display: none;}
+    .noticebox table tbody td:nth-child(4), .noticebox table tbody td:nth-child(5) {display: none;}
+    .noticebox table thead th:nth-child(4), .noticebox table thead th:nth-child(5) {display: none;}
+
+}
+@media screen and (max-width: 500px){
+    .noticebox table col:nth-child(1) {width: 8%; display: none;}
+    .noticebox table col:nth-child(2) {width: auto}
+    .noticebox table col:nth-child(3) {width: 13%; display: none;}
+    .noticebox table col:nth-child(4) {width: 13%; display: none;}
+    .noticebox table col:nth-child(5) {width: 8%; display: none;}
+    .noticebox table tbody td:nth-child(1), .noticebox table tbody td:nth-child(3) {display: none;}
+    .noticebox table thead th:nth-child(1), .noticebox table thead th:nth-child(3) {display: none;}
+
+}

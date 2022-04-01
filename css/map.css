@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+body {font-family: "Noto Sans", "Noto Sans KR", sans-serif; color: #333; background: #fff !important}
+legend {display: none}
+
+.mapbox {padding: 200px 0;}
+.mapbox iframe { height: 500px;}

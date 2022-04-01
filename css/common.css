@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {font-family: "Noto Sans", "Noto Sans KR", sans-serif; color: #333; background: #eee;}
+.row {max-width: 1200px; margin: 0 auto; padding: 0 10px;}
+button {outline: none; background: none;}
+
+
+/* header 구역 */
+#header {background: #fff;}
+#header.on {position: fixed; width: 100%; background: #fff; top: 0; left: 0; z-index: 999999;} 
+#header.on .top_menu {display: none}
+#header .top_menu {background:#f3f3f3; color: #888; font-size: 12px; text-align: right; }
+#header .top_menu a {padding: 7px 20px; display: inline-block; border-right: 1px solid #e3e3e3; }
+#header .top_menu a:nth-of-type(1) {border-left: 1px solid #e3e3e3;}
+#header .top_menu a:hover {color: #30a488}
+#header h1 {float: left; padding: 30px 0; padding-left: 20px;}
+#header .open, #header .close {display: none;}
+#header .nav {float: right; font-size: 18px; padding: 20px 20px 0 0}
+.nav .depth1 > li {display: inline-block; font-weight: bold; position: relative;
+                   padding: 30px 20px;}
+.nav .depth1 > li:hover {color: #30a488;}
+.nav .depth1 > li:nth-child(1) {color: #30a488}                   
+.nav .depth1 > li.on .depth2 {display: block;}
+.nav .depth2 {position: absolute; top: 100%; left: 0; width: 160px;
+              z-index: 999; background: #fff; display: none;}
+.nav .depth2 > li > a {padding: 13px 20px; display: block; font-size: 15px; color: #555;}
+.nav .depth2 > li:hover a {background: #30a488; color:#fff}
+/* 검색창 */
+#header .search {display: inline-block; padding-right: 10px;}
+#header .search #sbox {border: none; text-indent: 1em; width: 0;
+                       overflow: hidden; transition: all 0.5s; outline: none; }
+#header .search #sbox.on {width: 170px;}
+#header .search i:hover {color: #30a488; cursor: pointer}
+
+
+/* footer구역 */
+.ft1 {background: #444; color: #ddd; padding: 20px; margin-top: 100px;
+      position: relative;}
+.ft1 .privacy {float: left}
+.ft1 .privacy a {position: relative; padding-left: 30px; font-size: 14px;}
+.ft1 .privacy a:hover {color:#30a488}
+.ft1 .privacy a::after {content: ''; width: 1px; height: 10px; cursor: default; 
+                         background: #666; position: absolute; 
+                         top: 6px; bottom: 2px; right: -18px;}
+.ft1 .privacy a:last-child::after {display: none}             
+.ft1 .sns {float: right;}
+.ft1 .sns a {padding-right: 30px; font-size: 23px;}
+.ft1 .sns a:hover {color: #30a488;}
+.ft1 img {position: absolute; top: 0; left: 50%; transform: translate(-50%, -30px);}
+.ft2 {background: #222; color: #ccc; padding: 30px; position: relative; line-height: 1.5;}
+.ft2 span {display: block; font-size: 14px;}
+.ft2 strong {font-weight: 600;}
+.ft2 .address {float: left; margin-left: 100px ;}
+.ft2 .info {position: absolute; top: 50%; left: 50%; right: 0; transform: translateY(-50%);}
+.ft2 .contact {float: right;  margin-right: 100px ;}
+.ft2 .contact span:nth-child(3) {font-size: 12px;}
+
+/* go top 버튼 */
+.gotop {position: fixed; bottom: 30px; right: 30px; z-index: 999;  
+        transition: all 0.5s; opacity: 0;}
+.gotop.on {opacity: 1; z-index: 99999}
+.gotop a {width: 50px; height: 50px; line-height: 50px; display: block;
+          background: rgba(0, 0, 0, 0.8); color: #fff; transition: all 0.5s;
+          text-align: center; border-radius: 50%; font-size: 20px;}
+.gotop a:hover {background: #30a488}

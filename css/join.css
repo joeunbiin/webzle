@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+body {font-family: "Noto Sans", "Noto Sans KR", sans-serif; color: #333; background: #fff !important}
+legend {display: none}
+
+.joinbox {padding: 80px 50px}
+.joinbox h2 {font-size: 30px; padding: 40px 0; font-weight: bold;}
+.joinbox h3 {font-size: 18px; padding: 20px 0}
+
+
+.joinbox table {margin-bottom: 30px}
+.joinbox col:nth-child(1) {width: 20%;  background: #ddd}
+.joinbox col:nth-child(2) {width: 80%; background: #fff}
+.joinbox th, .joinbox td {border: 1px solid #bbb; text-align: left; line-height: 1.5;
+                          padding: 10px; vertical-align: middle;}    
+.joinbox input[type='text'],.joinBox input[type='password'],.joinBox select
+                     {height: 30px; border: 1px solid #ddd; text-indent: 1em; vertical-align: middle } 
+.joinbox select {text-indent: 0em;}       
+.joinbox textarea {width: 80%; height: 100px; border: 1px solid #ddd; 
+                   padding:10px;}
+.joinbox #idbox,
+.joinbox #pwbox,
+.joinbox #irum,
+.joinbox #emailid,
+.joinbox #emaildomain {width: 200px}
+.joinbox #zipcode,
+.joinbox #hp1,
+.joinbox #hp2,
+.joinbox #birth {width: 100px}
+.joinbox #addr1,
+.joinbox #addr2,
+.joinbox #addr3 {width: 35%}
+.joinbox #zipcode + button {height: 30px; vertical-align: middle; border: 1px solid #ddd;
+                            background: #eee; border-radius: 5px; margin-right: 5px; 
+                            padding: 0 8px ;}
+.joinbox td label {margin-right: 10px}
+.joinbox .agree span, 
+.joinbox .agree input,
+.joinbox .agree label {vertical-align: middle} 
+.joinbox .agree {background:#ddd; padding:20px;}
+.joinbox .agree > div {background: #fff; height: 100px; overflow-y: auto;
+                       line-height: 1.5; padding: 10px; margin-bottom: 10px;}
+.joinbox .agree input {margin-left: 10px;}
+.joinbox .btn {text-align: center}
+.joinbox .btn button {width: 100px; height: 40px; cursor: pointer; border-radius: 8px;  
+                      border: none; background: #30a488;  transition: all 0.5s;
+                      margin: 30px 10px; color: #fff; font-size:20px;} 
+.joinbox .btn button[type='reset'] {background: #000;}
+.joinbox .btn button[type='submit']:hover {background: #3bd4b1}
+.joinbox .btn button[type='reset']:hover {background: red}

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹즐미술관</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/ajax.css">
+    <link rel="stylesheet" href="css/rwdindex.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+</head>
+
+<body onload="wopen()">
+    <div class="wrap">
+        <header id="header">
+            <div class="top_menu">
+                <div class="row">
+                    <div class="search">
+                        <span class="blind">검색어 입력</span>
+                        <input type="text" id="sbox" placeholder="검색어 입력">
+                        <label for="sbox"><i class="fas fa-search"></i></label>
+                    </div>
+                    <a href="login.html"><i class="fas fa-lock"></i> 로그인</a>
+                    <a href="join.html"><i class="fas fa-user"></i> 회원가입</a>
+                </div>
+            </div>
+
+            <div class="row cf">
+                <h1><a href="index.html"><img src="./img/logo.png" alt=""></a></h1>
+                <div class="open">
+                    <button type="button"><span class="blind">메뉴 열기</span><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="nav">
+                    <ul class="depth1">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#none">소개하기 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="depth2">
+                                <li><a href="#none">소개하기01</a></li>
+                                <li><a href="#none">소개하기02</a></li>
+                                <li><a href="#none">소개하기03</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">사업소개 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="depth2">
+                                <li><a href="#none">사업소개01</a></li>
+                                <li><a href="#none">사업소개02</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">전시안내 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="depth2">
+                                <li><a href="#none">전시안내01</a></li>
+                                <li><a href="#none">전시안내02</a></li>
+                                <li><a href="#none">전시안내03</a></li>
+                                <li><a href="#none">전시안내04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">고객센터 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="depth2">
+                                <li><a href="notice.html">공지사항</a></li>
+                                <li><a href="#none">1:1상담</a></li>
+                                <li><a href="#none">자주묻는질문</a></li>
+                                <li><a href="#none">자료실</a></li>
+                                <li><a href="#none">포토갤러리</a></li>
+                                <li><a href="#none">동영상갤러리</a></li>
+                                <li><a href="#none">견적문의</a></li>
+                                <li><a href="#none">일정관리</a></li>
+                                <li><a href="#none">웹진형게시판</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="qna.html">문의하기</a></li>
+                    </ul>
+                </div>
+                <div class="close">
+                    <button type="button"><span class="blind">메뉴 닫기</span><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </header>
+        <section id="section">
+            <div class="main">
+                <article class="article1">
+                    <div class="slide_group1">
+                        <div class="slide slide1">
+                            <div class="img"></div>
+                            <div class="slidetext">
+                                <p>2021.03.01 ~ 12.31</p>
+                                <h2>웹즐(WEBZLE)과 함께하는<br>공연예술 리부팅 프로젝트</h2>
+                                <a href="#none">자세히 보기</a>
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div class="img"></div>
+                            <div class="slidetext">
+                                <p>Opening on Sun. Oct 10, 2021</p>
+                                <h2>Discover The Treasures Of A Egypt<br>Historical Museum</h2>
+                                <a href="#none">Detail view</a>
+                            </div>
+                        </div>
+                        <div class="slide slide3">
+                            <div class="img"></div>
+                            <div class="slidetext">
+                                <p>3월 3일(수) 오후 5시 온라인 최초 공개!</p>
+                                <h2>웹즐현대미술관 온라인 채널에서<br>'오페라의 유령'을 만나보세요. </h2>
+                                <a href="#none">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="playstop"><i class="fas fa-pause"></i></button>
+                </article>
+                <article class="article2 cf">
+                    <ul class="row cf">
+                        <li>
+                            <a href="#none"><i class="far fa-calendar-alt"></i></a>
+                            <h3>날짜 검색</h3>
+                            <p><a href="#none">오늘</a></p>
+                            <p><a href="#none">1주</a></p>
+                            <p><a href="#none">1달</a></p>
+                            <a href="#none">자세히 보기</a>
+                        </li>
+                        <li>
+                            <a href="#none"><i class="fas fa-map-marked-alt"></i></a>
+                            <h3>오시는 길</h3>
+                            <p>서울 서초구 남부순환로 2406<br>
+                                예술의전당 특별전시장</p>
+                            <a href="map.html">지도 보기</a>
+                        </li>
+                        <li>
+                            <a href="#none"><i class="fas fa-ticket-alt"></i></a>
+                            <h3>티켓 구매</h3>
+                            <p>Entertainment<br>
+                                & Ticket</p>
+                            <a href="#none">인터파크 구매</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="article3">
+                    <div class="row cf">
+                        <div class="title">
+                            <p>ABOUT WEBZLE</p>
+                            <h3>대한민국을 대표하는 문화공간으로 자리 잡아 왔습니다.</h3>
+                        </div>
+                        <p><img src="img/art3_person.png"></p>
+                        <div class="onview">
+                            <span>문화시민 양성을 위한 예술’, ‘폭 넓은 세계 문화 수용을 위한 예술’, ‘미래를 준비하는 예술’이라는 3가지 비전으로 서울 도심에 공공미술작품과 다양한
+                                국내외 전시를 개최함으로써 문화예술 발전에 기여하고 있습니다.</span>
+                            <ul>
+                                <li><a href="#none"></a>작품 수집 및 보존</li>
+                                <li><a href="#none"></a>연구활동</li>
+                                <li><a href="#none"></a>교육 프로그램 운영</li>
+                                <li><a href="#none"></a>영재 발굴 및 지원</li>
+                                <li><a href="#none"></a>예술을 통한 재능나눔</li>
+                                <li><a href="#none"></a>학술 세미나 후원</li>
+                                <li><a href="#none"></a>작가 발굴</li>
+                                <li><a href="#none"></a>작가 작품활동 지원</li>
+                                <li><a href="#none"></a>전기 개최</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="article4">
+                    <div class="gh row cf">
+                        <div class="title">
+                            <p>WHAT'S GOING ON</p>
+                            <h3>Upcoming Exhibitions</h3>
+                        </div>
+                        <div class="going">
+                            <div class="imgef">
+                                <img src="img/art4_1.jpg" alt="">
+                            </div>
+                            <div>
+                                <p>데스 브로피<br>(즐거운 인생)</p>
+                                <p>기간 : 2021.06.04. (금) ~ 2021.08.31. (화)</p>
+                            </div>
+                        </div>
+                        <div class="going">
+                            <div class="imgef">
+                                <img src="img/art4_2.jpg" alt="">
+                            </div>
+                            <div>
+                                <p>피카부<br>(PEEK-A-BOO)</p>
+                                <p>기간 : 2021.07.09. (금) ~ 2021.09.04. (토)</p>
+                            </div>
+                        </div>
+                        <div class="going last">
+                            <div class="imgef">
+                                <img src="img/art4_3.jpg" alt="">
+                            </div>
+                            <div>
+                                <p>이 공간, 그 장소<br>(헤테로토피아)</p>
+                                <p>기간 : 2021.09.17. (금) ~ 2021.10.10. (일)</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="article5">
+                    <div class="title row">
+                        <p>GALLERY</p>
+                        <h3>Explore The Collection</h3>
+                    </div>
+                    <div class="slide_group2">
+                        <div class="slide slide1">
+                            <div><img src="img/art5_1.jpg" alt=""></div>
+                            <div class="sdtext">
+                                <p>
+                                    <a href="#none">불혹, 미혹하다 3rd</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div><img src="img/art5_2.jpg" alt=""></div>
+                            <div class="sdtext">
+                                <p>
+                                    <a href="#none">신데렐라 유니버스</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide slide3">
+                            <div><img src="img/art5_3.jpg" alt=""></div>
+                            <div class="sdtext">
+                                <p>
+                                    <a href="#none">여인, 허리에 차다</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide slide4">
+                            <div><img src="img/art5_4.jpg" alt=""></div>
+                            <div class="sdtext">
+                                <p>
+                                    <a href="#none">GENESIS</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide slide5">
+                            <div><img src="img/art5_5.jpg" alt=""></div>
+                            <div class="sdtext">
+                                <p>
+                                    <a href="#none">플라스틱? PLASTIC!</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide slide6">
+                            <div><img src="img/art5_6.jpg" alt=""></di>
+                                <div class="sdtext">
+                                    <p>
+                                        <a href="#none">감각을 깨우는 물, 차 (茶)</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="article6">
+                    <div class="row cf">
+                        <div class="title">
+                            <p>GALLERY</p>
+                            <h3>Explore The Collection</h3>
+                        </div>
+                        <div class="column column1">
+                            <div class="imgef">
+                                <img src="img/art6_1.jpg" alt="">
+                            </div>
+                            <p>전통문화복합공간으로 전통의 창조적 계승을 통해 품격있는 한국전통의 멋과 맛을 경험하실 수 있는 국제적 관광명소입니다. 삼청각의 6개 한옥과 야외마당에서는
+                                다양한 문화행사를 즐기실 수 있습니다.</p>
+                            <a href="#none">자세히 보기</a>
+                        </div>
+                        <div class="column column2">
+                            <p>1백20여평 규모의 대형 전시실 8개, 30여평 규모의 소형전시실 8개, 로비 전시실, 옥외전시실 2개로 구성되어 있으며, 전시의 내용에 따라 전시실
+                                내부를 적절하게 쓸 수 있도록 개폐식 구조를 갖추고 있습니다.</p>
+                            <div class="imgef">
+                                <img src="img/art6_2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="article7">
+                    <div class="row">
+                        <div class="title">
+                            <p>WHAT’S GOING ON</p>
+                            <h3>전시연계 프로그램</h3>
+                        </div>
+                        <!-- <img src="img/art7_plant.png" alt=""> -->
+                        <div class="programm cf">
+                            <div class="first">
+                                <p>01</p><img src="img/art7_1.jpg" alt="">
+                            </div>
+                            <div class="second">
+                                <span>북토크 : 팬덤시티</span>
+                                <p>저자와 함께 도시에 관한 책을 읽고, 이에 대한 이야기를 나눠봅니다.</p>
+                            </div>
+                            <div class="third">
+                                <a href="#none">자세히 보기</a>
+                            </div>
+                        </div>
+                        <div class="programm cf">
+                            <div class="first">
+                                <p>02</p><img src="img/art7_2.jpg" alt="">
+                            </div>
+                            <div class="second">
+                                <span>아티스트 토크 (ARTIST TALK)</span>
+                                <p>웹즐미술관 (Flexible Space) 전시연계 프로그램</p>
+                            </div>
+                            <div class="third">
+                                <a href="#none">자세히 보기</a>
+                            </div>
+                        </div>
+                        <div class="programm cf">
+                            <div class="first">
+                                <p>03</p><img src="img/art7_3.jpg" alt="">
+                            </div>
+                            <div class="second">
+                                <span>그림라운지 서예법첨</span>
+                                <p>‘전통이 미래다’展 과 그림라운지의 기존 아크릴페인팅 이벤트가 콜라보된 프로그램</p>
+                            </div>
+                            <div class="third">
+                                <a href="#none">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="article8">
+                    <div class="row">
+                        <div class="conttext">
+                            <h4>5000개 이상의 전시품!</h4>
+                            <p>매일 더 많은 작품을이 웹즐미술관에 전시되고 있습니다.</p>
+                            <p>도심 속 예술을 공유하는 열린 미술관</p>
+                            <a href="#none">자세히보기</a>
+                            <a href="#none">카달로그보기</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="article9">
+                    <div class="row cf">
+                        <div class="title">
+                            <p>PHOTO GALLERY</p>
+                            <h3>포토갤러리</h3>
+                        </div>
+                        <div class="pushBtn">
+                            <button type="button"><i class="fas fa-plus"></i> Photo</button>
+                        </div>
+                        <div class="formBox">
+                            <form>
+                                <div class="allbox">
+                                    <p>
+                                        <label for="img">Photo : </label>
+                                        <input type="text" id="img" placeholder="img/이미지명.확장자">
+                                    </p>
+                                    <p>
+                                        <label for="title">Title : </label>
+                                        <input type="text" id="title">
+                                    </p>
+                                </div>
+                                <button type="submit">확인</button>
+                                <button type="reset">취소</button>
+                                <div class="closeform"><i class="fas fa-times"></i></div>
+                            </form>
+                        </div>
+                        <!-- <ul class="gallery">
+                            <li>
+                                <img src="img/art9_1.jpg" alt="">
+                                <p>Photo1</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_2.jpg" alt="">
+                                <p>Photo2</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_3.jpg" alt="">
+                                <p>Photo3</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_4.jpg" alt="">
+                                <p>Photo4</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_5.jpg" alt="">
+                                <p>Photo5</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_6.jpg" alt="">
+                                <p>Photo6</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_7.jpg" alt="">
+                                <p>Photo7</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_8.jpg" alt="">
+                                <p>Photo8</p>
+                            </li>
+                            <li>
+                                <img src="img/art9_9.jpg" alt="">
+                                <p>Photo9</p>
+                            </li>
+                        </ul> -->
+                    </div>
+                </article>
+                <article class="article10">
+                    <div class="row">
+                        <div class="slide_group3">
+                            <div class="slide slide1"><img src="img/brand1.png" alt=""></div>
+                            <div class="slide slide2"><img src="img/brand2.png" alt=""></div>
+                            <div class="slide slide3"><img src="img/brand3.png" alt=""></div>
+                            <div class="slide slide4"><img src="img/brand4.png" alt=""></div>
+                            <div class="slide slide5"><img src="img/brand5.png" alt=""></div>
+                            <div class="slide slide1"><img src="img/brand1.png" alt=""></div>
+                            <div class="slide slide2"><img src="img/brand2.png" alt=""></div>
+                            <div class="slide slide3"><img src="img/brand3.png" alt=""></div>
+                            <div class="slide slide4"><img src="img/brand4.png" alt=""></div>
+                            <div class="slide slide5"><img src="img/brand5.png" alt=""></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="article11 row cf">
+                    <div class="notice">
+                        <h3>Notice</h3>
+                        <table>
+                            <caption class="blind">공지사항</caption>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>2021 WEBZLE 미술관 전시작품 안내사항입니다. </td>
+                                    <td>2021-02-21</td>
+                                </tr>
+                                <tr>
+                                    <td>공지사항 테스트글입니다.</td>
+                                    <td>2021-02-22</td>
+                                </tr>
+                                <tr>
+                                    <td>공지사항 테스트글입니다.</td>
+                                    <td>2021-02-23</td>
+                                </tr>
+                                <tr>
+                                    <td>공지사항 테스트글입니다.</td>
+                                    <td>2021-02-24</td>
+                                </tr>
+                                <tr>
+                                    <td>공지사항 테스트글입니다.</td>
+                                    <td>2021-02-25</td>
+                            </tbody>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="contact">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#tel:02-1234-5678"><i class="fas fa-phone-square"></i> Tel. 02-1234-5678</a>
+                            </li>
+                            <li><a href="#none"><i class="fas fa-fax"></i> Fax. 02-1588-1588</a></li>
+                            <li><a href="#mailto:mail@address.co.kr"> E-Mail. mail@address.co.kr</a></li>
+                        </ul>
+                    </div>
+                    <div class="question">
+                        <h3>Questions</h3>
+                        <p>궁금하신 내용을 입력해주세요.<br>
+                            담당자가 확인 후 신속하게 연락드리겠습니다.</p>
+                        <a href="qna.html">작성하러가기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="ft1">
+                <div class="row cf">
+                    <div class="privacy">
+                        <a href="#none">사이트맵</a>
+                        <a href="#none">오시는 길·주차안내</a>
+                        <a href="#none">이용약관·정책</a>
+                        <a href="#none">개인정보처리방침</a>
+                    </div>
+                    <div class="sns">
+                        <a href="#none"><i class="fab fa-twitter"></i><span class="blind">트위터</span></a>
+                        <a href="#none"><i class="fab fa-facebook-square"></i><span class="blind">페이스북</span></a>
+                        <a href="#none"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a>
+                        <a href="#none"><i class="fab fa-blogger-b"></i><span class="blind">블로그</span></a>
+                        <a href="#none"><i class="far fa-comment-dots"></i><span class="blind">카카오톡</span></a>
+                    </div>
+                    <img src="./img/logo-footer.png" alt="">
+                </div>
+            </div>
+            <div class="ft2">
+                <div class="row cf">
+                    <div class="address">
+                        <span>서울특별시 동작구 보라매로5길 15 (신대방동,전문건설회관)</span>
+                        <span>© Copyright 2020 Webzle. All Rights Reserved.</span>
+                    </div>
+                    <div class="info">
+                        <span><strong>대표</strong> : 홍길동</span>
+                        <span><strong>사업자등록번호</strong> : 123-45-6789</span>
+                    </div>
+                    <div class="contact">
+                        <span><strong>평일</strong> : 오전 10:00 – 오후 6:00</span>
+                        <span><strong>주말 & 공휴일</strong> : 휴무</span>
+                        <span>(점심시간 : 12:00 - 13:00)</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="gotop">
+            <a href="#" class="gotop"><i class="fas fa-angle-up"></i></a>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/ajax.js"></script>
+
+    <script>
+        function getCookie(name) {
+            var cookie = document.cookie
+			if (cookie != "") {
+				var cname = cookie.split(';')
+				for (var i in cname) {
+					var ncname = cname[i].split('=')
+					if (ncname[0] == name) {
+						return ncname[1]
+					}
+				}
+			}
+			return
+		}
+
+        function wopen(){
+            var cookieCheck = getCookie('popupYN')
+            if (cookieCheck != 'N') {
+                window.open('popup.html', '', 'left=30, top=300, width=500, height=550, scrollbars=no resizable=yes')
+            }
+        }
+    </script>
+</body>
+
+</html>

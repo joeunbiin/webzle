@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body {font-family: "Noto Sans", "Noto Sans KR", sans-serif; color: #333; background: #fff !important}
+legend { display:none }
+
+.qnabox {padding: 80px 50px}
+.qnabox h2 {font-size: 30px; padding: 40px 0; font-weight: bold;}
+.qnabox .btn {text-align: center}
+.qnabox .btn button {width: 100px; height: 40px; cursor: pointer; border-radius: 8px;  
+                     border: none; background: #30a488;  transition: all 0.5s;
+                     margin: 30px 10px; color: #fff; font-size:20px;} 
+.qnabox .btn button[type='reset'] {background: #000;}
+.qnabox .btn button[type='submit']:hover {background: #3bd4b1}
+.qnabox .btn button[type='reset']:hover {background: red}
+
+.qnabox table {margin-bottom: 30px}
+.qnabox col:nth-child(1) {width: 20%; background: #ddd }
+.qnabox col:nth-child(2) {width: 80%; background: #fff }
+.qnabox th, .qnabox td {border: 1px solid #ccc; vertical-align: middle;
+                         padding: 13px; text-align: left; }   
+
+.qnabox input[type='text'],
+.qnabox input[type='password'],
+.qnabox select {height: 30px; border: 1px solid #ddd; 
+                text-indent: 1em; vertical-align: middle }   
+.qnabox select { text-indent: 0em; }       
+.qnabox textarea {width: 80%; height: 100px; border:1px solid #ddd; padding: 10px; }   
+    
+.qnabox .agree {padding: 5px 10px 20px; line-height: 1.5;}
+.qnabox #hp1, .qnabox #hp2 {width: 100px}
+.qnabox #title, .qnabox #memo {width: 80%;}
+.qnabox td label {margin-right: 10px}
